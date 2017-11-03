@@ -1,2 +1,3 @@
 # ProjectTest
-Test demos for little features and so on
+Test demos for some little features, such as comparing copy performance, traversing the directory, uptime statistics, and so on.
+
