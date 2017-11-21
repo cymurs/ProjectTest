@@ -27,7 +27,13 @@ int main(int argc, char** argv) {
     
 //    vector<float> emp;   
 //    trit::TestResizeInEmptyVector(emp);
-    trit::TestResizeInEmptyVectorMT();
+//    trit::TestResizeInEmptyVectorMT();
+    
+    struct A {
+        float a; int b; float c;
+    };
+    A t;
+    printf("a:%p, %p, %p\n", &t.a, &t.b, &t.c);
     
     cout << "success\n";
     return 0;
