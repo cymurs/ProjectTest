@@ -16,6 +16,7 @@
 #include "CompareVectorCpy.hpp"
 #include "CreateListOfFileInDir.hpp"
 #include "TestFatalBug.hpp"
+#include "TestSharedFromThis.h"
 
 /*
  * 
@@ -29,11 +30,14 @@ int main(int argc, char** argv) {
 //    trit::TestResizeInEmptyVector(emp);
 //    trit::TestResizeInEmptyVectorMT();
     
-    struct A {
-        float a; int b; float c;
-    };
-    A t;
-    printf("a:%p, %p, %p\n", &t.a, &t.b, &t.c);
+//    struct A {
+//        float a; int b; float c;
+//    };
+//    A t;
+//    printf("a:%p, %p, %p\n", &t.a, &t.b, &t.c);
+    
+    shared_ptr<test_sft> ts(new test_sft());
+    shared_ptr<test_sft> other = ts->get_ptr();
     
     cout << "success\n";
     return 0;
