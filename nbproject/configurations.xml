@@ -8,6 +8,9 @@
       <itemPath>include/ReserveAffect.h</itemPath>
       <itemPath>include/TestCanDel.hpp</itemPath>
       <itemPath>include/TestFatalBug.hpp</itemPath>
+      <itemPath>include/TestIgnite.hpp</itemPath>
+      <itemPath>include/TestPropertyTree.hpp</itemPath>
+      <itemPath>include/TestPropertyTreeJson.hpp</itemPath>
       <itemPath>include/TestSharedFromThis.h</itemPath>
       <itemPath>include/configuration.h</itemPath>
       <itemPath>include/share.h</itemPath>
@@ -43,6 +46,8 @@
           <standard>8</standard>
           <incDir>
             <pElem>include</pElem>
+            <pElem>${JAVA_HOME}/include</pElem>
+            <pElem>${JAVA_HOME}/include/linux</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
@@ -53,6 +58,10 @@
             <linkerLibLibItem>boost_thread</linkerLibLibItem>
             <linkerLibLibItem>boost_system</linkerLibLibItem>
             <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+            <linkerLibLibItem>ignite</linkerLibLibItem>
+            <linkerLibLibItem>ignite-jni</linkerLibLibItem>
+            <linkerLibLibItem>ignite-common</linkerLibLibItem>
+            <linkerLibLibItem>ignite-binary</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -67,6 +76,12 @@
       <item path="include/TestCanDel.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/TestFatalBug.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestIgnite.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestPropertyTree.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestPropertyTreeJson.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/TestSharedFromThis.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -92,6 +107,11 @@
         <ccTool>
           <developmentMode>5</developmentMode>
           <standard>8</standard>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>${JAVA_HOME}/include</pElem>
+            <pElem>${JAVA_HOME}/include/linux</pElem>
+          </incDir>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -99,6 +119,20 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerDynSerch>
+            <pElem>/usr/local/lib</pElem>
+          </linkerDynSerch>
+          <linkerLibItems>
+            <linkerLibLibItem>boost_thread</linkerLibLibItem>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibLibItem>boost_filesystem</linkerLibLibItem>
+            <linkerLibLibItem>ignite</linkerLibLibItem>
+            <linkerLibLibItem>ignite-jni</linkerLibLibItem>
+            <linkerLibLibItem>ignite-common</linkerLibLibItem>
+            <linkerLibLibItem>ignite-binary</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="include/CompareVectorCpy.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -111,6 +145,12 @@
       <item path="include/TestCanDel.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/TestFatalBug.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestIgnite.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestPropertyTree.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestPropertyTreeJson.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/TestSharedFromThis.h" ex="false" tool="3" flavor2="0">
       </item>

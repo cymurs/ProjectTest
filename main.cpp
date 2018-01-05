@@ -17,6 +17,10 @@
 #include "CreateListOfFileInDir.hpp"
 #include "TestFatalBug.hpp"
 #include "TestSharedFromThis.h"
+#include "ReserveAffect.h"
+#include "TestIgnite.hpp"
+#include "TestPropertyTree.hpp"
+#include "TestPropertyTreeJson.hpp"
 
 /*
  * 
@@ -36,8 +40,15 @@ int main(int argc, char** argv) {
 //    A t;
 //    printf("a:%p, %p, %p\n", &t.a, &t.b, &t.c);
     
-    shared_ptr<test_sft> ts(new test_sft());
-    shared_ptr<test_sft> other = ts->get_ptr();
+//    shared_ptr<test_sft> ts(new test_sft());
+//    shared_ptr<test_sft> other = ts->get_ptr();
+    
+//    TestReserveAffect();
+    
+//    TestIgnite();
+    
+    TestRWJson();
+//    TestJsonFunction();
     
     cout << "success\n";
     return 0;
