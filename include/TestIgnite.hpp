@@ -55,7 +55,7 @@ void TestIgnite() {
             cout << "Current Entry:" << testingEntry.GetKey() << "=" << testingEntry.GetValue() << endl << endl;
         }
         
-        
+        cout << "\n";
     } catch (IgniteError& err) {
         printf("An error occurred: %d(%s)\n", err.GetCode(), err.GetText());
     }

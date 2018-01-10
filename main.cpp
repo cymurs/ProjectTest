@@ -19,6 +19,7 @@
 #include "TestSharedFromThis.h"
 #include "ReserveAffect.h"
 #include "TestIgnite.hpp"
+#include "TestScanLargeFile.hpp"
 #include "TestPropertyTree.hpp"
 #include "TestPropertyTreeJson.hpp"
 
@@ -46,8 +47,10 @@ int main(int argc, char** argv) {
 //    TestReserveAffect();
     
 //    TestIgnite();
+//    for (int i=0; i<2; ++i)
+        TestScanLargeFile();
     
-    TestRWJson();
+//    TestRWJson();
 //    TestJsonFunction();
     
     cout << "success\n";
