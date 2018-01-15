@@ -22,6 +22,7 @@
 #include "TestScanLargeFile.hpp"
 #include "TestPropertyTree.hpp"
 #include "TestPropertyTreeJson.hpp"
+#include "CustomHelper.h"
 
 /*
  * 
@@ -48,12 +49,15 @@ int main(int argc, char** argv) {
     
 //    TestIgnite();
 //    for (int i=0; i<2; ++i)
-        TestScanLargeFile();
+//        TestScanLargeFile();
+    
+    size_t cnum(0);
+    native::CustomHelper::QueryCpuNum(cnum);
     
 //    TestRWJson();
 //    TestJsonFunction();
     
-    cout << "success\n";
+    cout << "<<< success >>>\n";
     return 0;
 }
 
