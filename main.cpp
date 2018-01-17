@@ -23,12 +23,17 @@
 #include "TestPropertyTree.hpp"
 #include "TestPropertyTreeJson.hpp"
 #include "CustomHelper.h"
+#include "TestSharedPtr.hpp"
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-//    CompareCpyToVector();   
+#ifdef SUBSTITUTE_BREAKPOINT
+    getchar();
+#endif
+    
+ //    CompareCpyToVector();   
 //    Call();
 //    CreateListOfFile("/home/image/part");
     
@@ -51,13 +56,21 @@ int main(int argc, char** argv) {
 //    for (int i=0; i<2; ++i)
 //        TestScanLargeFile();
     
-    size_t cnum(0);
-    native::CustomHelper::QueryCpuNum(cnum);
+//    size_t cnum(0);
+//    native::CustomHelper::QueryCpuNum(cnum);
+    
+    TestSharedPtr();
+    for (int i=0; i<100; ++i) {
+        cout << "\rDemo " << i << std::flush;
+    }
     
 //    TestRWJson();
 //    TestJsonFunction();
     
-    cout << "<<< success >>>\n";
+    cout << "\n<<< success >>>\n";
+#ifdef SUBSTITUTE_BREAKPOINT
+    getchar();
+#endif
     return 0;
 }
 

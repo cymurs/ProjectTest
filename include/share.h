@@ -30,6 +30,7 @@
 
 
 #define BOOST_DATE_TIME_SOURCE
+#undef SUBSTITUTE_BREAKPOINT
 
 using namespace std;
 namespace BPT = boost::posix_time;
