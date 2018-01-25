@@ -24,6 +24,7 @@
 #include "TestPropertyTreeJson.hpp"
 #include "CustomHelper.h"
 #include "TestSharedPtr.hpp"
+#include "TestWrapMalloc.hpp"
 
 /*
  * 
@@ -60,12 +61,14 @@ int main(int argc, char** argv) {
 //    native::CustomHelper::QueryCpuNum(cnum);
     
     TestSharedPtr();
-    for (int i=0; i<100; ++i) {
-        cout << "\rDemo " << i << std::flush;
-    }
+//    for (int i=0; i<100; ++i) {
+//        cout << "\rDemo " << i << std::flush;
+//    }
     
 //    TestRWJson();
 //    TestJsonFunction();
+    
+//    TestWrapMalloc(5);
     
     cout << "\n<<< success >>>\n";
 #ifdef SUBSTITUTE_BREAKPOINT

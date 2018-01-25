@@ -37,7 +37,12 @@ private:
 };
 
 void TestSharedPtr() {
-    shared_ptr<tsp> tst(new tsp()); //= std::make_shared<tsp>();
+    tsp* pT = new tsp();
+    shared_ptr<tsp> tst(pT); //= std::make_shared<tsp>();
+    
+//    delete pT;
+//    pT = nullptr;
+//    cout << "tsp has released......" << endl;
     tst->Print();
 }
 
