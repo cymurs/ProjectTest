@@ -25,7 +25,8 @@
 #include "CustomHelper.h"
 #include "TestSharedPtr.hpp"
 #include "TestWrapMalloc.hpp"
-
+#include "TestPrintScanfFloat.hpp"
+#include <cstdlib>
 /*
  * 
  */
@@ -60,7 +61,7 @@ int main(int argc, char** argv) {
 //    size_t cnum(0);
 //    native::CustomHelper::QueryCpuNum(cnum);
     
-    TestSharedPtr();
+//    TestSharedPtr();
 //    for (int i=0; i<100; ++i) {
 //        cout << "\rDemo " << i << std::flush;
 //    }
@@ -69,6 +70,10 @@ int main(int argc, char** argv) {
 //    TestJsonFunction();
     
 //    TestWrapMalloc(5);
+    
+//    TestPrintScanfFloat();
+    
+    
     
     cout << "\n<<< success >>>\n";
 #ifdef SUBSTITUTE_BREAKPOINT
