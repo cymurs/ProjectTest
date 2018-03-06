@@ -10,6 +10,7 @@
       <itemPath>include/TestCanDel.hpp</itemPath>
       <itemPath>include/TestFatalBug.hpp</itemPath>
       <itemPath>include/TestIgnite.hpp</itemPath>
+      <itemPath>include/TestPrintScanfFloat.hpp</itemPath>
       <itemPath>include/TestPropertyTree.hpp</itemPath>
       <itemPath>include/TestPropertyTreeJson.hpp</itemPath>
       <itemPath>include/TestScanLargeFile.hpp</itemPath>
@@ -24,7 +25,6 @@
       <logicalFolder name="f1" displayName="temporary" projectFiles="true">
         <itemPath>src/CustomHelper.cpp</itemPath>
       </logicalFolder>
-      <itemPath>include/TestPrintScanfFloat.hpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles" displayName="资源文件" projectFiles="true">
@@ -127,7 +127,6 @@
           <developmentMode>5</developmentMode>
         </cTool>
         <ccTool>
-          <developmentMode>5</developmentMode>
           <standard>8</standard>
           <incDir>
             <pElem>include</pElem>
@@ -138,9 +137,6 @@
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
         </fortranCompilerTool>
-        <asmTool>
-          <developmentMode>5</developmentMode>
-        </asmTool>
         <linkerTool>
           <linkerDynSerch>
             <pElem>/usr/local/lib</pElem>
@@ -154,6 +150,7 @@
             <linkerLibLibItem>ignite-common</linkerLibLibItem>
             <linkerLibLibItem>ignite-binary</linkerLibLibItem>
           </linkerLibItems>
+          <commandLine>-Wl,--wrap,malloc -Wl,--wrap,free</commandLine>
         </linkerTool>
       </compileType>
       <item path="include/CompareVectorCpy.hpp" ex="false" tool="3" flavor2="0">
