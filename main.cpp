@@ -26,6 +26,7 @@
 #include "TestSharedPtr.hpp"
 #include "TestWrapMalloc.hpp"
 #include "TestPrintScanfFloat.hpp"
+#include "CompareUnordered_mapAndMap.hpp"
 #include <cstdlib>
 #include <cstdio>
 #include <malloc.h>  // malloc_trim
@@ -75,19 +76,22 @@ int main(int argc, char** argv) {
 //    TestWrapMalloc(5);
     
 //    TestPrintScanfFloat();
-    setenv("MALLOC_TRACE", "memory_leak_test.log", 1);
-    mtrace();
-    {
-        CompletelyClearVector();
-    }
-    muntrace();
+    
+//    setenv("MALLOC_TRACE", "memory_leak_test.log", 1);
+//    mtrace();
+//    {
+//        CompletelyClearVector();
+//    }
+//    muntrace();
+    
+    CompareVectorAndList();
     
     cout << "\n<<< success >>>\n";
 #ifdef SUBSTITUTE_BREAKPOINT
     getchar();
 #endif
     
-//    malloc_trim(0); 
+    
   
     return 0;
 }

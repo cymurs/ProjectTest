@@ -2,6 +2,7 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <itemPath>include/CompareUnordered_mapAndMap.hpp</itemPath>
       <itemPath>include/CompareVectorCpy.hpp</itemPath>
       <itemPath>include/CreateListOfFileInDir.hpp</itemPath>
       <itemPath>include/CustomHelper.h</itemPath>
@@ -75,6 +76,11 @@
           <commandLine>-Wl,--wrap,malloc -Wl,--wrap,free</commandLine>
         </linkerTool>
       </compileType>
+      <item path="include/CompareUnordered_mapAndMap.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="include/CompareVectorCpy.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/CreateListOfFileInDir.hpp" ex="false" tool="3" flavor2="0">
@@ -153,6 +159,11 @@
           <commandLine>-Wl,--wrap,malloc -Wl,--wrap,free</commandLine>
         </linkerTool>
       </compileType>
+      <item path="include/CompareUnordered_mapAndMap.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="include/CompareVectorCpy.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/CreateListOfFileInDir.hpp" ex="false" tool="3" flavor2="0">
