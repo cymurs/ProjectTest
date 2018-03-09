@@ -2,6 +2,10 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles" displayName="头文件" projectFiles="true">
+      <logicalFolder name="f1" displayName="multi_thread" projectFiles="true">
+        <itemPath>src/CProcessMutex.cpp</itemPath>
+        <itemPath>include/CProcessMutex.h</itemPath>
+      </logicalFolder>
       <itemPath>include/CompareUnordered_mapAndMap.hpp</itemPath>
       <itemPath>include/CompareVectorCpy.hpp</itemPath>
       <itemPath>include/CreateListOfFileInDir.hpp</itemPath>
@@ -76,6 +80,8 @@
           <commandLine>-Wl,--wrap,malloc -Wl,--wrap,free</commandLine>
         </linkerTool>
       </compileType>
+      <item path="include/CProcessMutex.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/CompareUnordered_mapAndMap.hpp"
             ex="false"
             tool="3"
@@ -118,6 +124,8 @@
       <item path="include/time_interval.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CProcessMutex.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/CustomHelper.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -139,6 +147,9 @@
             <pElem>${JAVA_HOME}/include</pElem>
             <pElem>${JAVA_HOME}/include/linux</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>linux</Elem>
+          </preprocessorList>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -155,10 +166,13 @@
             <linkerLibLibItem>ignite-jni</linkerLibLibItem>
             <linkerLibLibItem>ignite-common</linkerLibLibItem>
             <linkerLibLibItem>ignite-binary</linkerLibLibItem>
+            <linkerLibLibItem>pthread</linkerLibLibItem>
           </linkerLibItems>
           <commandLine>-Wl,--wrap,malloc -Wl,--wrap,free</commandLine>
         </linkerTool>
       </compileType>
+      <item path="include/CProcessMutex.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/CompareUnordered_mapAndMap.hpp"
             ex="false"
             tool="3"
@@ -201,6 +215,8 @@
       <item path="include/time_interval.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/CProcessMutex.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/CustomHelper.cpp" ex="false" tool="1" flavor2="0">
       </item>
