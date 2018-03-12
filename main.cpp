@@ -27,6 +27,7 @@
 #include "TestWrapMalloc.hpp"
 #include "TestPrintScanfFloat.hpp"
 #include "CompareUnordered_mapAndMap.hpp"
+#include "TestDesignPattern.hpp"
 #include <cstdlib>
 #include <cstdio>
 #include <malloc.h>  // malloc_trim
@@ -84,15 +85,15 @@ int main(int argc, char** argv) {
 //    }
 //    muntrace();
     
-    CompareVectorAndList();
+//    CompareVectorAndList();
+    TestSingleton();
     
     cout << "\n<<< success >>>\n";
 #ifdef SUBSTITUTE_BREAKPOINT
     getchar();
 #endif
     
-    
-  
+      
     return 0;
 }
 

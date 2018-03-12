@@ -3,6 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+#ifndef TESTPRINTSCANFFLOAT_HPP
+#define TESTPRINTSCANFFLOAT_HPP
+
+#include <cstdlib>
+#include <cstdio>
 
 void TestPrintScanfFloat()
 {
@@ -14,3 +19,5 @@ void TestPrintScanfFloat()
     sscanf(line, "%f %d", &fout, &res);
     printf("out=%g, res=%d", fout, res);
 }
+
+#endif

@@ -23,7 +23,7 @@
 #include <algorithm>
 #include <thread>
 #include <boost/any.hpp>
-//#include <boost/thread.hpp>
+#include <boost/thread.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/property_tree/ptree.hpp>
