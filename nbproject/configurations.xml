@@ -7,6 +7,9 @@
         <itemPath>include/Singleton.h</itemPath>
         <itemPath>include/TestDesignPattern.hpp</itemPath>
       </logicalFolder>
+      <logicalFolder name="f3" displayName="interview" projectFiles="true">
+        <itemPath>include/TestInterview.hpp</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="multi_thread" projectFiles="true">
         <itemPath>src/CProcessMutex.cpp</itemPath>
         <itemPath>include/CProcessMutex.h</itemPath>
@@ -112,6 +115,8 @@
       </item>
       <item path="include/TestIgnite.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/TestInterview.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/TestPrintScanfFloat.hpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="include/TestPropertyTree.hpp" ex="false" tool="3" flavor2="0">
@@ -208,6 +213,8 @@
       <item path="include/TestFatalBug.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/TestIgnite.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/TestInterview.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/TestPrintScanfFloat.hpp" ex="false" tool="1" flavor2="0">
       </item>
