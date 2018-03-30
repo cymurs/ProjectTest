@@ -88,8 +88,8 @@ int main(int argc, char** argv) {
     
 //    CompareVectorAndList();
 //    TestSingleton();
-    TestInterview();
-
+//    TestInterview();
+    
     
     cout << "\n<<< success >>>\n";
 #ifdef SUBSTITUTE_BREAKPOINT
