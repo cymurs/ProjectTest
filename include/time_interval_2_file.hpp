@@ -25,23 +25,29 @@
 using std::ofstream;
 using std::string;
 using std::mutex;
-using std::lock_guard<mutex>;
+using std::lock_guard;
+using std::ios;
 
 class TimeInterval2File
 {
-    TimeInterval2File(ofstream&& rhs, const string& d) : outfile(rhs), detail(d)
+public:
+    TimeInterval2File(const string& f, const string& d) : outfile(f, ios::out | ios::app), detail(d)
     {
         init();
-    }
-
-    TimeInterval2File(ofstream&& rhs)
+    }    
+    
+    TimeInterval2File(const string& f) : outfile(f)
     {
         init();
     }
     
+    TimeInterval2File(TimeInterval2File& obj) = delete;
+    TimeInterval2File& operator=(TimeInterval2File& obj) = delete;    
+    
     ~TimeInterval2File()
     {
-        outfile.close();
+        if (outfile.is_open())
+            outfile.close();
     }
 
     TimeInterval2File& operator()(const string& d) 
@@ -49,7 +55,7 @@ class TimeInterval2File
         detail.assign(d);
     }
     
-    void begin() {
+    void start() {
 #ifdef GCC
         gettimeofday(&begin, NULL);
 #else
@@ -57,7 +63,7 @@ class TimeInterval2File
 #endif // GCC
     }
     
-    void end() {
+    void stop() {
         lock_guard<mutex> lck(mtx);
 #ifdef GCC
         gettimeofday(&end, NULL);
