@@ -44,6 +44,11 @@ class TimeInterval2File
         outfile.close();
     }
 
+    TimeInterval2File& operator()(const string& d) 
+    {
+        detail.assign(d);
+    }
+    
     void begin() {
 #ifdef GCC
         gettimeofday(&begin, NULL);
