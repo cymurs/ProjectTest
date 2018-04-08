@@ -29,6 +29,7 @@
 #include "CompareUnordered_mapAndMap.hpp"
 #include "TestDesignPattern.hpp"
 #include "TestInterview.hpp"
+#include "TestTimeInterval.hpp"
 #include <cstdlib>
 #include <cstdio>
 #include <malloc.h>  // malloc_trim
@@ -89,6 +90,7 @@ int main(int argc, char** argv) {
 //    CompareVectorAndList();
 //    TestSingleton();
 //    TestInterview();
+    TestTimeInterval();
     
     
     cout << "\n<<< success >>>\n";

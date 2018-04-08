@@ -14,8 +14,10 @@
 #ifndef TIME_INTERVAL_2_FILE_HPP
 #define TIME_INTERVAL_2_FILE_HPP
 
-#ifdef GCC
-#include <sys/time.h>
+
+#ifndef WIN32
+//#include <sys/time.h>
+#include <chrono>
 #else
 #include <ctime>
 #endif // GCC
@@ -27,16 +29,17 @@ using std::string;
 using std::mutex;
 using std::lock_guard;
 using std::ios;
+using namespace chrono;
 
 class TimeInterval2File
 {
 public:
-    TimeInterval2File(const string& f, const string& d) : outfile(f, ios::out | ios::app), detail(d)
+    TimeInterval2File(const string& f, const string& d) : outfile(f, ios::out | ios::app), detail(d), suspend(duration<int>(0))
     {
         init();
     }    
     
-    TimeInterval2File(const string& f) : outfile(f)
+    TimeInterval2File(const string& f) : outfile(f), suspend(duration<int>(0))
     {
         init();
     }
@@ -56,25 +59,46 @@ public:
     }
     
     void start() {
-#ifdef GCC
-        gettimeofday(&begin, NULL);
+#ifndef WIN32
+//        gettimeofday(&begin, NULL);
+//        begin = {begin.tv_sec - suspend.tv_sec, begin.tv_usec - suspend.tv_usec);
+        begin = system_clock::now();
+        begin -= suspend;
 #else
         begin = clock();
-#endif // GCC
+        begin -= suspend;
+#endif // GCC                
     }
     
     void stop() {
         lock_guard<mutex> lck(mtx);
-#ifdef GCC
-        gettimeofday(&end, NULL);
-        outfile << detail 
-            << 1000 * (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1000 
-            << " ms" << endl;
+#ifndef WIN32
+//        gettimeofday(&end, NULL);
+//        outfile << detail 
+//            << 1000 * (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1000 
+//            << " ms" << endl;
+        end = system_clock::now();
+        outfile << detail
+                << duration_cast<milliseconds>(end - begin).count() << " ms" << endl;                
 #else
         end = clock();
         outfile << detail 
             << (double)(end - begin) << " ms" << std::endl;
 #endif // GCC        
+    }
+    
+    void pause() {
+#ifndef WIN32
+//        gettimeofday(&suspend, NULL);
+        system_clock::time_point temp = system_clock::now();        
+#else
+        suspend = clock();
+#endif // GCC              
+        suspend = temp - begin;
+    }
+    
+    void reset() {
+        suspend = duration<int>(0);
     }
     
 protected:
@@ -85,10 +109,12 @@ private:
     string detail;
     ofstream outfile;
     mutex mtx;
-#ifdef GCC
-    timeval begin, end;
+#ifndef WIN32
+//    timeval begin, end, suspend;
+    system_clock::time_point begin, end;
+    system_clock::duration suspend;
 #else
-    clock_t begin, end;
+    clock_t begin, end, suspend;
 #endif // GCC
 };
 
