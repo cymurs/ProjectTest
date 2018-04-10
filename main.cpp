@@ -30,6 +30,7 @@
 #include "TestDesignPattern.hpp"
 #include "TestInterview.hpp"
 #include "TestTimeInterval.hpp"
+#include "TestZlib.hpp"
 #include <cstdlib>
 #include <cstdio>
 #include <malloc.h>  // malloc_trim
@@ -90,8 +91,27 @@ int main(int argc, char** argv) {
 //    CompareVectorAndList();
 //    TestSingleton();
 //    TestInterview();
-    TestTimeInterval();
+//    TestTimeInterval();
     
+    /*
+    vector<int> tmp{1, 2, 3, 4, 5};
+    for (int idx=0; idx<tmp.size(); ++idx) {
+        cout << tmp[idx] << endl;
+        
+        if ( !(tmp[idx] & 0x01) ) {            
+            tmp.erase(tmp.begin() + idx);
+            --idx;
+            continue;
+        }
+        cout << "index=" << idx << endl;    
+    }
+    for (auto& val : tmp) {
+        cout << val << " ";
+    }
+    cout << endl;
+    */
+    
+    TestZlib();
     
     cout << "\n<<< success >>>\n";
 #ifdef SUBSTITUTE_BREAKPOINT
